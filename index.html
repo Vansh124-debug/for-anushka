@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>For Anushka 💖</title>
+  <style>
+    body {
+      margin: 0; padding: 0;
+      background: linear-gradient(to bottom, #ff9a9e, #fad0c4);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex; flex-direction: column; justify-content: center; align-items: center;
+      height: 100vh;
+      text-align: center;
+    }
+    .container {
+      background: rgba(255, 255, 255, 0.9);
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      max-width: 500px;
+    }
+    h1 {
+      color: #e91e63;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 1.2rem;
+      color: #444;
+      line-height: 1.6;
+      white-space: pre-line;
+    }
+    .signature {
+      margin-top: 20px;
+      font-style: italic;
+      color: #e91e63;
+      font-size: 1.1rem;
+    }
+    button {
+      margin-top: 20px;
+      padding: 12px 25px;
+      font-size: 1rem;
+      border: none;
+      background-color: #e91e63;
+      color: white;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #c2185b;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>For Anushka 💖</h1>
+    <p>
+      Anushka, tum meri life mein aayi ho aur sab kuch easy lagne laga hai.<br />
+      Tumhare wajah se main apni life better bana raha hoon, padhai pe dhyaan de raha hoon, aur apne goals ke kareeb ja raha hoon.<br />
+      Tumhari har baat, har muskaan mujhe strong banati hai.<br />
+      Bas yahi chahata hoon ki hum hamesha saath rahein, kyunki tum ho to sab perfect hai.
+    </p>
+    <div class="signature">— Vansh ❤️</div>
+
+    <button id="playBtn">Play Music</button>
+
+    <audio id="audio" loop>
+      <source src="until_i_found_her.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+
+  <script>
+    const playBtn = document.getElementById('playBtn');
+    const audio = document.getElementById('audio');
+
+    playBtn.addEventListener('click', () => {
+      if (audio.paused) {
+        audio.play();
+        playBtn.textContent = 'Pause Music';
+      } else {
+        audio.pause();
+        playBtn.textContent = 'Play Music';
+      }
+    });
+  </script>
+</body>
+</html>
